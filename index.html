@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>照片墙</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        #container{
+            width:500px;
+            margin:100px auto;
+            position:relative;
+        }
+        #container img{
+            position:absolute;
+            top:0;
+            left:0;
+            border:solid 10px #ccc;
+            box-shadow: 5px 5px 5px  rgba(50,50,50,.4);
+            /*box-shadow:阴影水平偏移量 阴影垂直偏移量 阴影模糊值 阴影外延值 阴影的颜色 ；*/
+            -webkit-box-shadow: 5px 5px 5px  rgba(50,50,50,.4);
+            -moz-box-shadow: 5px 5px 5px  rgba(50,50,50,.4);
+            transition: all 1s ease;
+            -webkit-transition:all 1s ease;
+            -moz-transition:all 1s ease;
+        }
+        #container img:first-child{
+            transform:rotate(30deg);
+            -webkit-transform:rotate(30deg);
+            -moz-transform:rotate(30deg);
+        }
+        #container img:last-child{
+            transform:rotate(-20deg);
+            -webkit-transform:rotate(-20deg);
+            -moz-transform:rotate(-20deg);
+        }
+        #container img:hover{
+            box-shadow: 10px 10px 5px rgba(50, 50, 50, .4);
+            -webkit-box-shadow: 10px 10px 5px rgba(50, 50, 50, .4);
+            -moz-box-shadow: 10px 10px 5px rgba(50, 50, 50, .4);
+            z-index:1;
+            transform:scale(1.2) rotate(0deg);
+            -webkit-transform:scale(1.2) rotate(0deg);
+            -moz-transform:scale(1.2) rotate(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="img/img01.jpg" alt=""/>
+        <img src="img/img02.jpg" alt=""/>
+    </div>
+</body>
+</html>
